@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<center>
+<table>
+<tr><th>Name </th><td th:text="${name}">name</td></tr>
+<tr><th>Score </th><td th:text="${score}">score</td></tr>
+<tr><th>Rating </th><td th:text="${rating}">rating</td></tr>
+<tr><th>Recommendation </th><td th:text="${recommendation}">recommendation</td></tr>
+
+</table>
+
+
+</center>
+
+<form id="form1" action="/user/main" method="post">
+<input name="email" type="hidden" id="em">
+<center><a href="#" onclick="document.getElementById('form1').submit();">Back to Main</a></center>
+    
+</form>
+
+</center>
+<script>
+document.getElementById("em").value = sessionStorage.getItem("email");
+</script>
+</body>
+</html>
